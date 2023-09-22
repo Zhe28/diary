@@ -1,0 +1,40 @@
+{
+  "name": "my-journal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev src",
+    "build": "vitepress build src",
+    "serve": "vitepress serve src",
+    "lint": "npx lint-staged",
+    "prepare": "husky install",
+    "prettier": "prettier . -w "
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.3",
+    "vitepress": "latest",
+    "vue": "^3.3.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  },
+  "dependencies": {
+    "@mdit/plugin-attrs": "^0.4.8",
+    "@mdit/plugin-img-lazyload": "^0.4.8",
+    "@mdit/plugin-tasklist": "^0.4.8",
+    "js-yaml": "^4.1.0",
+    "less": "^4.2.0",
+    "vitepress-plugin-pagefind": "^0.2.9"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,css,md}": [
+      "prettier --write"
+    ]
+  }
+}
